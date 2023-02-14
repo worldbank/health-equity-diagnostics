@@ -9,18 +9,13 @@ The process keeps track of what geocoding method is used to assign geo-location,
 ## Methodology
 
 1. Clean and format data from hierarchy lists.
-
-2. Match administrative name to administrative polygon shapefile across various levels using fuzzy match.
-
-3. Match to locations from the Health Sites IO / RHINO using fuzzy match based on facility name, ensuring the result falls within the right admin boundary,
-
-4. Geocode with APIs (OSM, Bing Maps, and Google) based on highest unit level (orgunitlevel 5), and highest admin boundary level (admin 3), ensuring the result falls within polygon.
-
-5. Geocode with APIs (OSM, Bing Maps, and Google) based on highest unit level (orgunitlevel 5), and second highest admin boundary level (admin 2), ensuring the result falls within polygon.
-
-6. Geocode based on second-highest unit level (orgunitlevel 4), ensuring the result falls within polygon (admin 3), otherwise use polygon centroid.
-
-7. Geocode based on second-highest unit level (orgunitlevel 4) and lowest boundary level (admin 2) ensuring the result falls within polygon.
+2. Match administrative name to administrative polygon shapefile across various levels using fuzzy matching.
+3. Match to locations from the Health Sites IO / RHINO using fuzzy matching based on facility name (orgunitlevel 5), ensuring the result falls within the right admin boundary.
+4. Run geocoding process using OSM, Bing Maps and Google Maps, using several combination names, with the following priority:
+   * Highest unit level (orgunitlevel 5) and highest admin boundary level (admin 3), ensuring the result falls within admin 3 polygon.
+   * Highest unit level (orgunitlevel 5) and second highest admin name (admin 2/1), ensuring the result falls within admin 3 polygon.
+   * Second-highest unit level (orgunitlevel 4), ensuring the result falls within admin 3 polygon, otherwise use polygon centroid.
+   * Geocode based on second-highest unit level (orgunitlevel 4) and lowest boundary level (admin 2/1) ensuring the result falls within admin 2/1 polygon.
 
 ## Data Sources
 * Health Facility Lists (queried from HMIS)
