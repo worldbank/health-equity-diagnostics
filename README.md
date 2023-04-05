@@ -18,10 +18,10 @@ This repository contains scripts developed by GOST to map health facilities and 
 
 ### Results
 
-🔖 [**Liberia**](notebooks/diagnostic/liberia.ipynb)
-🔖 [**Ghana**](notebooks/diagnostic/ghana.ipynb)
-🔖 [**Sierra Leone**](notebooks/diagnostic/sierra-leone.ipynb)
-🔖 [**Mali**](notebooks/diagnostic/mali.ipynb)
+🔖 [**Liberia**](notebooks/diagnostic/liberia.ipynb)  
+🔖 [**Ghana**](notebooks/diagnostic/ghana.ipynb)  
+🔖 [**Sierra Leone**](notebooks/diagnostic/sierra-leone.ipynb)  
+🔖 [**Mali**](notebooks/diagnostic/mali.ipynb)  
 🔖 [**Bangladesh**](notebooks/diagnostic/bangladesh.ipynb)
 
 These pages are generated from the following python notebooks:
@@ -29,7 +29,7 @@ These pages are generated from the following python notebooks:
 
 ## Geocoding
 
-The objective of these notebooks is to assign geographic coordinates to health facilities from HMIS database by matching column names to administrative boundaries, matching facility names to entries from alternative sources, and running queries with geocoding APIs.
+Since not all countries have provided master lists of health facilities, we have designed a workflow to assign geographic coordinates to health facilities from the HMIS database. The geocoding notebooks follow a process to match facilities with sub-national boundaries by fuzzy matching admin names, match facility names to entries from alternative sources, and run queries using the location names with geocoding APIs.
 
 Due to the hierarchical nature of the health facilities dataset, our strategy is to attempt to geo-locate facilities a the most disaggregated level possible. Where a match is not possible, we assign a location based on lower levels of geographic boundaries (provinces or districts).
 
