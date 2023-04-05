@@ -2,11 +2,14 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Examples
+  - caption: Country Equity Diagnostic
     numbered: True
     chapters:
-    - file: notebooks/world-bank-api.ipynb
-    - file: notebooks/world-bank-package.ipynb
+    - file: notebooks/diagnostic/liberia.ipynb
+    - file: notebooks/diagnostic/ghana.ipynb
+    - file: notebooks/diagnostic/sierra-leone.ipynb
+    - file: notebooks/diagnostic/mali.ipynb
+    - file: notebooks/diagnostic/bangladesh.ipynb
   - caption: Additional Resources
     chapters:
       - url: https://datapartnership.org
