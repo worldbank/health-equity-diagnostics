@@ -682,10 +682,10 @@ title="Print to PDF"
 </section>
 <section id="results">
 <h3>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h3>
-<p>🔖 <a class="reference internal" href="notebooks/diagnostic/liberia.html"><span class="doc std std-doc"><strong>Liberia</strong></span></a>
-🔖 <a class="reference internal" href="notebooks/diagnostic/ghana.html"><span class="doc std std-doc"><strong>Ghana</strong></span></a>
-🔖 <a class="reference internal" href="notebooks/diagnostic/sierra-leone.html"><span class="doc std std-doc"><strong>Sierra Leone</strong></span></a>
-🔖 <a class="reference internal" href="notebooks/diagnostic/mali.html"><span class="doc std std-doc"><strong>Mali</strong></span></a>
+<p>🔖 <a class="reference internal" href="notebooks/diagnostic/liberia.html"><span class="doc std std-doc"><strong>Liberia</strong></span></a><br />
+🔖 <a class="reference internal" href="notebooks/diagnostic/ghana.html"><span class="doc std std-doc"><strong>Ghana</strong></span></a><br />
+🔖 <a class="reference internal" href="notebooks/diagnostic/sierra-leone.html"><span class="doc std std-doc"><strong>Sierra Leone</strong></span></a><br />
+🔖 <a class="reference internal" href="notebooks/diagnostic/mali.html"><span class="doc std std-doc"><strong>Mali</strong></span></a><br />
 🔖 <a class="reference internal" href="notebooks/diagnostic/bangladesh.html"><span class="doc std std-doc"><strong>Bangladesh</strong></span></a></p>
 <p>These pages are generated from the following python notebooks:</p>
 <blockquote>
@@ -695,7 +695,7 @@ title="Print to PDF"
 </section>
 <section id="geocoding">
 <h2>Geocoding<a class="headerlink" href="#geocoding" title="Permalink to this heading">#</a></h2>
-<p>The objective of these notebooks is to assign geographic coordinates to health facilities from HMIS database by matching column names to administrative boundaries, matching facility names to entries from alternative sources, and running queries with geocoding APIs.</p>
+<p>Since not all countries have provided master lists of health facilities, we have designed a workflow to assign geographic coordinates to health facilities from the HMIS database. The geocoding notebooks follow a process to match facilities with sub-national boundaries by fuzzy matching admin names, match facility names to entries from alternative sources, and run queries using the location names with geocoding APIs.</p>
 <p>Due to the hierarchical nature of the health facilities dataset, our strategy is to attempt to geo-locate facilities a the most disaggregated level possible. Where a match is not possible, we assign a location based on lower levels of geographic boundaries (provinces or districts).</p>
 <p>The process keeps track of what geocoding method is used to assign geo-location, with some methods yielding higher accuracy/precision than others.</p>
 <p>See latest run at:</p>
